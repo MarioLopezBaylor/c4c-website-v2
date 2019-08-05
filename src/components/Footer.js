@@ -4,8 +4,6 @@ import React from "react";
 // reactstrap components
 import { Container } from "reactstrap";
 
-// core components
-
 function DefaultFooter() {
   return (
     <>
@@ -14,41 +12,29 @@ function DefaultFooter() {
           <nav>
             <ul>
               <li>
-                <a
-                  href="#"
-                  target="_blank"
-                >
+                <a href="#" target="_blank">
                   Contact
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  target="_blank"
-                >
+                <a href="#" target="_blank">
                   About Us
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  target="_blank"
-                >
+                <a href="#" target="_blank">
                   Blog
                 </a>
               </li>
             </ul>
           </nav>
           <div className="copyright" id="copyright">
-          © {new Date().getFullYear()}, {" "}
-          <a
-            href="#"
-            target="_blank"
-          >
-            Computing for Compassion
-          </a>
-          .
-        </div>
+            © {new Date().getFullYear()},{" "}
+            <a href="#" target="_blank">
+              Computing for Compassion
+            </a>
+            .
+          </div>
         </Container>
       </footer>
     </>

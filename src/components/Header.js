@@ -5,7 +5,7 @@
 import React from "react";
 
 // reactstrap components
-import { Button, Container } from "reactstrap";
+import { Container } from "reactstrap";
 
 function LandingPageHeader() {
   let pageHeader = React.createRef();
@@ -29,6 +29,7 @@ function LandingPageHeader() {
       <div className="page-header page-header-small">
         <div
           className="page-header-image"
+          /* Photo by John Schnobrich on Unsplash */
           style={{
             backgroundImage: "url(" + require("assets/img/helping.jpg") + ")"
           }}
