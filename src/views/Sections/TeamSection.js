@@ -33,7 +33,8 @@ function TeamSection() {
                 />
                 <h4 className="title">Mario Lopez</h4>
                 <p className="category text-info">President</p>
-                <p>CS Senior</p>
+                <p>Computer Science Senior</p>
+                <p>Baylor University</p>
                 <Button
                   className="btn-icon btn-round"
                   color="info"
@@ -53,7 +54,8 @@ function TeamSection() {
                 />
                 <h4 className="title">Brandon Mork</h4>
                 <p className="category text-info">Vice President</p>
-                <p>CS Senior</p>
+                <p>Computer Science Senior</p>
+                <p>Baylor University</p>
                 <Button
                   className="btn-icon btn-round"
                   color="info"
@@ -73,7 +75,8 @@ function TeamSection() {
                 />
                 <h4 className="title">Billicarole Evans</h4>
                 <p className="category text-info">Treasurer</p>
-                <p>MechE Senior</p>
+                <p>Mechanical Engineering Senior</p>
+                <p>Baylor University</p>
                 <Button
                   className="btn-icon btn-round"
                   color="info"
@@ -93,7 +96,8 @@ function TeamSection() {
                 />
                 <h4 className="title">Megan Bibb</h4>
                 <p className="category text-info">Head of Philanthropy</p>
-                <p>CS Junior</p>
+                <p>Computer Science Junior</p>
+                <p>Baylor University</p>
                 <Button
                   className="btn-icon btn-round"
                   color="info"
@@ -113,7 +117,8 @@ function TeamSection() {
                 />
                 <h4 className="title">Neil Wilcoxen</h4>
                 <p className="category text-info">Secretary</p>
-                <p>CS Senior</p>
+                <p>Computer Science Senior</p>
+                <p>Baylor University</p>
                 <Button
                   className="btn-icon btn-round"
                   color="info"
@@ -133,7 +138,8 @@ function TeamSection() {
                 />
                 <h4 className="title">Miranda Montroy</h4>
                 <p className="category text-info">External Engagement Coordinator</p>
-                <p>MIS Sophomore</p>
+                <p>Management Information Systems Sophomore</p>
+                <p>Baylor University</p>
                 <Button
                   className="btn-icon btn-round"
                   color="info"
@@ -154,7 +160,15 @@ function TeamSection() {
                 <h4 className="title">Citlally Ruiz</h4>
                 <p className="category text-info">Marketing Chair</p>
                 <p>Computer Science Freshman</p>
-
+                <p>Baylor University</p>
+                <Button
+                  className="btn-icon btn-round"
+                  color="info"
+                  href="#pablo"
+                  onClick={e => e.preventDefault()}
+                >
+                  <i className="fab fa-linkedin" />
+                </Button>
               </div>
             </Col>
             <Col md="4">
@@ -166,7 +180,8 @@ function TeamSection() {
                 />
                 <h4 className="title">Jeff Donahoo</h4>
                 <p className="category text-info">Advisor, Co-Founder</p>
-                <p>Computer Science Professor</p>
+                <p>Professor of Computer Science</p>
+                <p>Baylor University</p>
                 <Button
                   className="btn-icon btn-round"
                   color="info"
@@ -185,8 +200,9 @@ function TeamSection() {
                   src={Booth}
                 />
                 <h4 className="title">Bill Booth</h4>
-                <p className="category text-info">Co-Founder</p>
-                <p>Senior Lecturer</p>
+                <p className="category text-info">Advisor, Co-Founder</p>
+                <p>Senior Lecturer of Computer Science</p>
+                <p>Baylor University</p>
                 <Button
                   className="btn-icon btn-round"
                   color="info"

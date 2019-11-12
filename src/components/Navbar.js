@@ -2,7 +2,7 @@
  * @TODO Extract strings from this page into resource file
  */
 
- import React from "react";
+import React from "react";
 
 // reactstrap components
 import {
@@ -17,6 +17,48 @@ import {
 } from "reactstrap";
 
 function MainNavbar() {
+  // This is a meme
+  // I'll explain later lmfao
+
+  const easeInOutQuad = (t, b, c, d) => {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  };
+
+  const smoothScroll = (e, target) => {
+    if (window.location.pathname === "/index") {
+      var isMobile = navigator.userAgent.match(
+        /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
+      );
+      if (isMobile) {
+        // if we are on mobile device the scroll into view will be managed by the browser
+      } else {
+        e.preventDefault();
+        var targetScroll = document.getElementById(target);
+        scrollGo(document.documentElement, targetScroll.offsetTop, 1250);
+      }
+    }
+  };
+
+  const scrollGo = (element, to, duration) => {
+    var start = element.scrollTop,
+      change = to - start,
+      currentTime = 0,
+      increment = 20;
+
+    var animateScroll = function() {
+      currentTime += increment;
+      var val = easeInOutQuad(currentTime, start, change, duration);
+      element.scrollTop = val;
+      if (currentTime < duration) {
+        setTimeout(animateScroll, increment);
+      }
+    };
+    animateScroll();
+  };
+
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
 
@@ -34,6 +76,8 @@ function MainNavbar() {
         setNavbarColor("navbar-transparent");
       }
     };
+
+    // Navbar color changes on scroll
     window.addEventListener("scroll", updateNavbarColor);
     return function cleanup() {
       window.removeEventListener("scroll", updateNavbarColor);
@@ -54,9 +98,9 @@ function MainNavbar() {
       <Navbar className={"fixed-top " + navbarColor} color="info" expand="lg">
         <Container>
           <div className="navbar-translate">
-            <NavbarBrand href="#" target="_blank" id="navbar-brand">
+            <NavbarBrand href="#" id="navbar-brand">
               <img
-                alt="..."
+                alt="White C4C Logo"
                 className="img-fluid"
                 style={{ maxWidth: "30px" }}
                 src={require("assets/img/C4C_Logo_White.png")}
@@ -84,24 +128,38 @@ function MainNavbar() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink href="#" disabled>
-                  About Us
+                <NavLink
+                  to="/index#about"
+                  onClick={e => smoothScroll(e, "about")}
+                >
+                  About
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#" disabled>
-                  Capabilities
+                <NavLink
+                  to="/index#team"
+                  onClick={e => smoothScroll(e, "team")}
+                >
+                  Team
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#" disabled>
-                  Gallery
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#" disabled>
+                <NavLink
+                  to="/index#contact"
+                  onClick={e => smoothScroll(e, "contact")}
+                >
                   Contact
                 </NavLink>
+              </NavItem>
+              <UncontrolledTooltip
+                placement="bottom"
+                target="gallery"
+                delay={0}
+              >
+                Coming soon!
+              </UncontrolledTooltip>
+              <NavItem id="gallery">
+                <NavLink to="#">Gallery</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
@@ -114,19 +172,6 @@ function MainNavbar() {
                 </NavLink>
                 <UncontrolledTooltip target="#facebook-tooltip">
                   Like us on Facebook
-                </UncontrolledTooltip>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href="https://twitter.com/BaylorC4C"
-                  target="_blank"
-                  id="twitter-tooltip"
-                >
-                  <i className="fab fa-twitter" />
-                  <p className="d-lg-none d-xl-none">Twitter</p>
-                </NavLink>
-                <UncontrolledTooltip target="#twitter-tooltip">
-                  Follow us on Twitter
                 </UncontrolledTooltip>
               </NavItem>
               <NavItem>

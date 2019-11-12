@@ -28,12 +28,14 @@ const items = [
   {
     src: require("assets/img/IgniteCS.jpg"),
     altText: "igniteCS",
-    caption: "C4C volunteers teaching local elementary school children Computer Science concepts."
+    caption:
+      "C4C volunteers teaching local elementary school children Computer Science concepts."
   },
   {
     src: require("assets/img/Wacode.jpg"),
     altText: "Wacode",
-    caption: "Wacode Hackathon participants hard at work to finish their projects."
+    caption:
+      "Wacode Hackathon participants hard at work to finish their projects."
   }
 ];
 
@@ -70,7 +72,7 @@ function ProjectSection() {
         </div>
         <Container>
           <Row>
-            <Col className="ml-auto mr-auto" md="10" xl="8">
+            <Col className="ml-auto mr-auto" md="10" xl="7">
               <div id="carousel">
                 <Carousel
                   activeIndex={activeIndex}
@@ -94,7 +96,7 @@ function ProjectSection() {
                 </Carousel>
               </div>
             </Col>
-            <Col className="ml-auto mr-auto" md="10" xl="4">
+            <Col className="ml-auto mr-auto" md="10" xl="5">
               <Card>
                 <CardHeader>
                   <Nav className="justify-content-center" role="tablist" tabs>
@@ -149,38 +151,41 @@ function ProjectSection() {
                   >
                     <TabPane tabId="iconPills1">
                       <p>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
+                        <b>
+                          Our volunteers to help your organization
+                          thrive and troubleshoot the technology issues you are
+                          facing. We have helped non-profits with various
+                          projects including hardware replacement, network
+                          troubleshooting, and data recovery.
+                        </b>
                       </p>
                     </TabPane>
                     <TabPane tabId="iconPills2">
                       <p>
-                        I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture. I am the nucleus. I think that’s a
-                        responsibility that I have, to push possibilities, to
-                        show people, this is the level that things could be at.
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at.
+                        <b>
+                          Our volunteers are eager to use the knowledge gathered
+                          in the classrooms out in the real world. What better
+                          way to do that then to share that knowledge with the
+                          underserved children of our community. We hope to
+                          ignite a passion for computer science in these young
+                          children to lead the way as future technology
+                          professionals.
+                        </b>
                       </p>
                     </TabPane>
                     <TabPane tabId="iconPills3">
                       <p>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
+                        <b>
+                          Wacode is our annual hackathon that is hosted in Waco,
+                          TX. We partner with Baylor University and various
+                          corporate sponsors to put together a 12-hour
+                          competition where participants are able to build cool
+                          websites, apps, and other coding projects to help
+                          solve some of our community's problems. The event
+                          features free food, free swag, workshops led by
+                          industry professionals, internship and full-time job
+                          opportunities.
+                        </b>
                       </p>
                     </TabPane>
                   </TabContent>

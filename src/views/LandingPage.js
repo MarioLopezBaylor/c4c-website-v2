@@ -14,13 +14,13 @@ import AboutSection from "./Sections/AboutSection";
 import TeamSection from "./Sections/TeamSection";
 import ContactSection from "./Sections/ContactSection";
 import ProjectSection from "./Sections/ProjectSection";
-import InstagramFeedSection from "./Sections/InstagramFeedSection";
 
 function LandingPage() {
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
     document.documentElement.classList.remove("nav-open");
+
     return function cleanup() {
       document.body.classList.remove("landing-page");
       document.body.classList.remove("sidebar-collapse");
@@ -32,11 +32,18 @@ function LandingPage() {
       <Navbar />
       <div className="wrapper">
         <Header />
-        <AboutSection />
-        <ProjectSection />
-        <InstagramFeedSection />
-        <TeamSection />
-        <ContactSection />
+        <div id="about">
+          <AboutSection />
+        </div>
+        <div id="projects">
+          <ProjectSection />
+        </div>
+        <div id="team">
+          <TeamSection />
+        </div>
+        <div id="contact">
+          <ContactSection />
+        </div>
         <Footer />
       </div>
     </>
