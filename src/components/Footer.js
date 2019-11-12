@@ -1,4 +1,10 @@
 /*eslint-disable*/
+
+/**
+ * @TODO
+ * Extract strings from this page into a resource file
+ */
+
 import React from "react";
 
 // reactstrap components
@@ -13,17 +19,17 @@ function DefaultFooter() {
             <ul>
               <li>
                 <a href="#" target="_blank">
-                  Contact
+                  Legal
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank">
-                  About Us
+                <a href="https://www.wacode.org/" target="_blank">
+                  Wacode
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank">
-                  Blog
+                <a href="https://www.ecs.baylor.edu/index.php?id=960857" target="_blank">
+                  Baylor CS
                 </a>
               </li>
             </ul>
@@ -33,7 +39,6 @@ function DefaultFooter() {
             <a href="#" target="_blank">
               Computing for Compassion
             </a>
-            .
           </div>
         </Container>
       </footer>

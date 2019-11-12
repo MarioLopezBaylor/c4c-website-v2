@@ -37,11 +37,15 @@ function LandingPageHeader() {
         />
         <div className="content-center">
           <Container>
-            <h2 className="title">
-              Running a non-profit is hard. Technology should not get in the way of your goals.
-            </h2>
+            <h3 className="title">
+              Running a non-profit organization is hard. Technology should not
+              get in the way.
+            </h3>
             <div className="text-center">
-              <h4 className="title">Computing for Compassion is an IT consulting organization aimed at helping non-profits focus on their mission.</h4>
+              <h5 className="title">
+                We are computer science, engineering, and business students
+                who are here to help.
+              </h5>
             </div>
           </Container>
         </div>

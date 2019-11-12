@@ -61,12 +61,8 @@ function MainNavbar() {
                 style={{ maxWidth: "30px" }}
                 src={require("assets/img/C4C_Logo_White.png")}
               />{" "}
-
               <b>Computing for Compassion</b>
             </NavbarBrand>
-            <UncontrolledTooltip target="#navbar-brand">
-              Designed by Invision. Coded by Creative Tim
-            </UncontrolledTooltip>
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {

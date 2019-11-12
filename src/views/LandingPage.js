@@ -13,6 +13,8 @@ import Footer from "components/Footer.js";
 import AboutSection from "./Sections/AboutSection";
 import TeamSection from "./Sections/TeamSection";
 import ContactSection from "./Sections/ContactSection";
+import ProjectSection from "./Sections/ProjectSection";
+import InstagramFeedSection from "./Sections/InstagramFeedSection";
 
 function LandingPage() {
   React.useEffect(() => {
@@ -31,6 +33,8 @@ function LandingPage() {
       <div className="wrapper">
         <Header />
         <AboutSection />
+        <ProjectSection />
+        <InstagramFeedSection />
         <TeamSection />
         <ContactSection />
         <Footer />
