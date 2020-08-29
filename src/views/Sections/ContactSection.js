@@ -9,7 +9,7 @@ import {
   InputGroup,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 function ContactSection() {
@@ -67,8 +67,8 @@ function ContactSection() {
                 block
                 className="btn-round"
                 color="info"
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+                href="mailto:baylorc4c@gmail.com"
+                onClick={(e) => e.preventDefault()}
                 size="lg"
               >
                 Send Message
