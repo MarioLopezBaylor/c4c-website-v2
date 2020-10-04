@@ -4,220 +4,64 @@
 
 import React from "react";
 
-import Booth from "assets/img/profile/Booth.jpg";
-import Brandon from "assets/img/profile/Brandon.jpeg";
-import Donahoo from "assets/img/profile/Donahoo.jpg";
-import Neil from "assets/img/profile/Neil.png";
-import Mario from "assets/img/profile/Mario.jpeg";
-import Meghan from "assets/img/profile/MeghanOfficerSm.jpg";
-import Miranda from "assets/img/profile/MirandaOfficerPic.jpg";
-import Zachary from "assets/img/profile/ZacharyOfficerSm.jpg";
+import officerList from "../../assets/c4c-officers";
+import advisorList from "../../assets/c4c-advisors";
+
 import DefaultAvatar from "assets/img/default-avatar.png";
 
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
 
+function MemberList(props) {
+    return (
+        <Row>
+            {props.list.map(officer => {
+                return (<Col md="4">
+                    <div className="team-player">
+                        <img
+                            alt={`${officer.name} Profile`}
+                            className="rounded-circle img-fluid img-raised officer-image"
+                            src={(officer.image && `${process.env.PUBLIC_URL}/profile/${officer.image}`) || DefaultAvatar}
+                        />
+                        <h4 className="title">{officer.name}</h4>
+                        <p className="category text-info">{officer.title}</p>
+                        <p>{officer.major}</p>
+                        <p>{officer.school}</p>
+                        {officer.linkedin && <Button
+                            className="btn-icon btn-round"
+                            color="info"
+                            href={officer.linkedin}
+                            onClick={e => e.preventDefault()}
+                        >
+                            <i className="fab fa-linkedin" />
+                        </Button>}
+                        {officer.github && <Button
+                            className="btn-icon btn-round"
+                            color="info"
+                            href={officer.github}
+                            onClick={e => e.preventDefault()}
+                        >
+                            <i className="fab fa-github" />
+                        </Button>}
+                    </div>
+                </Col>)
+            })}
+        </Row>
+    );
+}
+
 function TeamSection() {
-  return (
-    <div className="section section-team text-center">
-      <Container>
-        <h2 className="title">Meet the team</h2>
-        <div className="team">
-          <Row>
-            <Col md="4">
-              <div className="team-player">
-                <img
-                  alt="Meghan Profile"
-                  className="rounded-circle img-fluid img-raised"
-                  src={Meghan}
-                />
-                <h4 className="title">Meghan Bibb</h4>
-                <p className="category text-info">President</p>
-                <p>Computer Science Senior</p>
-                <p>Baylor University</p>
-                <Button
-                  className="btn-icon btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <i className="fab fa-linkedin" />
-                </Button>
-              </div>
-            </Col>
-            <Col md="4">
-              <div className="team-player">
-                <img
-                  alt="Brooklynn Profile"
-                  className="rounded-circle img-fluid img-raised"
-                  src={DefaultAvatar}
-                />
-                <h4 className="title">Brooklynn Stone</h4>
-                <p className="category text-info">Vice President</p>
-                <p>Computer Science Junior</p>
-                <p>Baylor University</p>
-                <Button
-                  className="btn-icon btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <i className="fab fa-linkedin" />
-                </Button>
-              </div>
-            </Col>
-            <Col md="4">
-              <div className="team-player">
-                <img
-                  alt="Citlally Profile"
-                  className="rounded-circle img-fluid img-raised"
-                  src={DefaultAvatar}
-                />
-                <h4 className="title">Citlally Ruiz</h4>
-                <p className="category text-info">Treasurer</p>
-                <p>Computer Science Sophomore</p>
-                <p>Baylor University</p>
-                <Button
-                  className="btn-icon btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <i className="fab fa-linkedin" />
-                </Button>
-              </div>
-            </Col>
-            <Col md="4">
-              <div className="team-player">
-                <img
-                  alt="Ashley"
-                  className="rounded-circle img-fluid img-raised"
-                  src={DefaultAvatar}
-                />
-                <h4 className="title">Ashley Lu Couch</h4>
-                <p className="category text-info">Head of Philanthropy</p>
-                <p>Computer Science Junior</p>
-                <p>Baylor University</p>
-                <Button
-                  className="btn-icon btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <i className="fab fa-linkedin" />
-                </Button>
-              </div>
-            </Col>
-            <Col md="4">
-              <div className="team-player">
-                <img
-                  alt="Andrew"
-                  className="rounded-circle img-fluid img-raised"
-                  src={DefaultAvatar}
-                />
-                <h4 className="title">Andrew Ammentorp</h4>
-                <p className="category text-info">Secretary</p>
-                <p>Computer Science Junior</p>
-                <p>Baylor University</p>
-                <Button
-                  className="btn-icon btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <i className="fab fa-linkedin" />
-                </Button>
-              </div>
-            </Col>
-            <Col md="4">
-              <div className="team-player">
-                <img
-                  alt="Miranda Profile"
-                  className="rounded-circle img-fluid img-raised"
-                  src={Miranda}
-                />
-                <h4 className="title">Miranda Montroy</h4>
-                <p className="category text-info">External Engagement Coordinator</p>
-                <p>Management Information Systems Junior</p>
-                <p>Baylor University</p>
-                <Button
-                  className="btn-icon btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <i className="fab fa-linkedin" />
-                </Button>
-              </div>
-            </Col>
-            <Col md="4">
-              <div className="team-player">
-                <img
-                  alt="Zachary Profile"
-                  className="rounded-circle img-fluid img-raised"
-                  src={Zachary}
-                />
-                <h4 className="title">Zachary Scherer</h4>
-                <p className="category text-info">Wacode Committee Chair</p>
-                <p>Computer Science Sophomore</p>
-                <p>Baylor University</p>
-                <Button
-                  className="btn-icon btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <i className="fab fa-linkedin" />
-                </Button>
-              </div>
-            </Col>
-            <Col md="4">
-              <div className="team-player">
-                <img
-                  alt="Donahoo Profile"
-                  className="rounded-circle img-fluid img-raised"
-                  src={Donahoo}
-                />
-                <h4 className="title">Jeff Donahoo</h4>
-                <p className="category text-info">Advisor, Co-Founder</p>
-                <p>Professor of Computer Science</p>
-                <p>Baylor University</p>
-                <Button
-                  className="btn-icon btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <i className="fab fa-linkedin" />
-                </Button>
-              </div>
-            </Col>
-            <Col md="4">
-              <div className="team-player">
-                <img
-                  alt="Booth Profile"
-                  className="rounded-circle img-fluid img-raised"
-                  src={Booth}
-                />
-                <h4 className="title">Bill Booth</h4>
-                <p className="category text-info">Advisor, Co-Founder</p>
-                <p>Senior Lecturer of Computer Science</p>
-                <p>Baylor University</p>
-                <Button
-                  className="btn-icon btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                >
-                  <i className="fab fa-linkedin" />
-                </Button>
-              </div>
-            </Col>
-          </Row>
+    return (
+        <div className="section section-team text-center">
+            <Container>
+                <h2 className="title">Meet the team</h2>
+                <div className="team">
+                    <MemberList list={officerList}/>
+                    <MemberList list={advisorList}/>
+                </div>
+            </Container>
         </div>
-      </Container>
-    </div>
-  );
+    );
 }
 
 export default TeamSection;

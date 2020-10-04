@@ -38,8 +38,8 @@ function LandingPageHeader() {
         <div className="content-center">
           <Container>
             <h3 className="title">
-              Running a non-profit is tough. Technology should not
-              get in the way.
+              Running a non-profit is tough. <br/>
+              Technology should not get in the way.
             </h3>
             <div className="text-center">
               <h5 className="title">

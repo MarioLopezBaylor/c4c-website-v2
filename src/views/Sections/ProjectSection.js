@@ -66,7 +66,7 @@ function ProjectSection() {
 
   return (
     <>
-      <div className="section section-tabs">
+      <div className="section section-tabs project-section">
         <div className="ml-auto mr-auto text-center">
           <h2 className="title">What do we do?</h2>
         </div>
@@ -103,7 +103,6 @@ function ProjectSection() {
                     <NavItem>
                       <NavLink
                         className={iconPills === "1" ? "active" : ""}
-                        href="#pablo"
                         onClick={e => {
                           e.preventDefault();
                           setIconPills("1");
@@ -117,7 +116,6 @@ function ProjectSection() {
                     <NavItem>
                       <NavLink
                         className={iconPills === "2" ? "active" : ""}
-                        href="#pablo"
                         onClick={e => {
                           e.preventDefault();
                           setIconPills("2");
@@ -131,7 +129,6 @@ function ProjectSection() {
                     <NavItem>
                       <NavLink
                         className={iconPills === "3" ? "active" : ""}
-                        href="#pablo"
                         onClick={e => {
                           e.preventDefault();
                           setIconPills("3");

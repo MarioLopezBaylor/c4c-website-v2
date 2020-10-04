@@ -17,11 +17,11 @@ function DefaultFooter() {
         <Container>
           <nav>
             <ul>
-              <li>
+              {/* <li>
                 <a href="#" target="_blank">
                   Legal
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="https://www.wacode.org/" target="_blank">
                   Wacode

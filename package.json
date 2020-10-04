@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MarioLopezBaylor/c4c-website-v2.git"
+    "url": "git+https://github.com/BaylorComputingForCompassion/c4c-website-v2.git"
   },
   "keywords": [
     "react",
@@ -18,7 +18,7 @@
   "author": "Computing for Compassion",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MarioLopezBaylor/c4c-website-v2/issues"
+    "url": "https://github.com/BaylorComputingForCompassion/c4c-website-v2/issues"
   },
   "homepage": "https://www.computingforcompassion.org/",
   "dependencies": {

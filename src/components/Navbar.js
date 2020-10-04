@@ -187,6 +187,19 @@ function MainNavbar() {
                   Follow us on Instagram
                 </UncontrolledTooltip>
               </NavItem>
+              <NavItem>
+                <NavLink
+                  href="https://twitter.com/baylorc4c"
+                  target="_blank"
+                  id="twitter-tooltip"
+                >
+                  <i className="fab fa-twitter" />
+                  <p className="d-lg-none d-xl-none">Twitter</p>
+                </NavLink>
+                <UncontrolledTooltip target="#twitter-tooltip">
+                  Follow us on Twitter
+                </UncontrolledTooltip>
+              </NavItem>
             </Nav>
           </Collapse>
         </Container>

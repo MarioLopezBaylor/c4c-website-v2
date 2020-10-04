@@ -504,3 +504,25 @@
     display: none !important;
   }
 }
+
+.officer-image {
+    max-height: 100px;
+    max-width: 100px;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.team-player > .btn-icon {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.project-section .card {
+    margin-bottom: 0px;
+}
+
+.section-team .row {
+    justify-content: center;
+}

@@ -25,7 +25,7 @@ function AboutSection() {
             <p>
               <b>
                 Computing for Compassion is a student-led organization whose
-                mission is to help & assist other compassion based organizations
+                mission is to help &amp; assist other compassion based organizations
                 through the appropriate application of technology and empower
                 our communities through computer science education.
               </b>
