@@ -31,7 +31,7 @@ function MemberList(props) {
                             className="btn-icon btn-round"
                             color="info"
                             href={officer.linkedin}
-                            onClick={e => e.preventDefault()}
+                            // onClick={e => e.preventDefault()}
                         >
                             <i className="fab fa-linkedin" />
                         </Button>}
@@ -39,7 +39,7 @@ function MemberList(props) {
                             className="btn-icon btn-round"
                             color="info"
                             href={officer.github}
-                            onClick={e => e.preventDefault()}
+                            // onClick={e => e.preventDefault()}
                         >
                             <i className="fab fa-github" />
                         </Button>}
